@@ -194,6 +194,24 @@ header h1 {
   100% { transform: translateX(-50%) translateY(-30px); opacity: 0; }
 }
 
+@media (max-width: 768px) {
+  .vela {
+    width: 25px;
+    height: 50px;
+    background: repeating-linear-gradient(
+      45deg,
+      #ffcc00,
+      #ffcc00 5px,
+      #ff6600 5px,
+      #ff6600 10px
+    );
+    margin: 0 5px;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
 main.galeria {
   display: flex;
   flex-wrap: wrap;
