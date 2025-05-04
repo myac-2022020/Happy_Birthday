@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  background: #8ecfee ;
   color: #333;
   text-align: center;
+  background: #8ecfee;
 }
 
 header {
@@ -62,7 +62,10 @@ header h1 {
   ;
 }
 
-
+.pastelBox{
+  background: #8ecfee;
+  margin-bottom: 6em;
+}
 
 .pastel-wrapper {
   width: 100%;
@@ -194,30 +197,13 @@ header h1 {
   100% { transform: translateX(-50%) translateY(-30px); opacity: 0; }
 }
 
-@media (max-width: 768px) {
-  .vela {
-    width: 25px;
-    height: 50px;
-    background: repeating-linear-gradient(
-      45deg,
-      #ffcc00,
-      #ffcc00 5px,
-      #ff6600 5px,
-      #ff6600 10px
-    );
-    margin: 0 5px;
-    position: relative;
-    border-radius: 2px;
-    cursor: pointer;
-  }
-}
-
 main.galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10rem;
   padding: 2rem 1rem;
+  background: linear-gradient(180deg, rgba(142, 207, 238, 1) 0%, rgba(245, 184, 177, 1) 50%, rgba(255, 236, 210, 1) 100%);
 }
 
 @keyframes subir {
@@ -239,6 +225,17 @@ main.galeria {
   justify-content: center;
   text-align: center;
   color: #fff;
+  animation: subir 0.8s ease forwards;
+}
+
+.textBoxPhoto {
+  width: 50%;
+  display: flex;
+  font-family: 'Margesh', sans-serif;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
   animation: subir 0.8s ease forwards;
 }
 
@@ -286,14 +283,6 @@ main.galeria {
   font-size: 0.95rem;
 }
 
-footer {
-  background: #2f82ac;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  display: none;
-}
-
 @media (max-width: 780px){
   .textBox {
     width: 90%;
@@ -302,3 +291,54 @@ footer {
   }
 }
 
+@media (max-width: 1024px) {
+  .pastel {
+    width: 400px;
+    height: 130px;
+  }
+
+  #velasContainer {
+    top: -30%;
+  }
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .pastel {
+    width: 300px;
+    height: 110px;
+  }
+
+  #velasContainer {
+    top: -60px;
+    gap: 1px;
+  }
+
+  .textBox {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+
+  .varita {
+    width: 30%;
+  }
+
+  .foto {
+    width: 70%;
+  }
+  .vela {
+    width: 10px;
+    height: 50px;
+    background: repeating-linear-gradient(
+      45deg,
+      #ffcc00,
+      #ffcc00 5px,
+      #ff6600 5px,
+      #ff6600 10px
+    );
+    margin: 0 5px;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
